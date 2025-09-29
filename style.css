@@ -46,18 +46,31 @@ body {
     margin: 0 auto;
 }
 
-/* YouTube Video Styles */
+/* YouTube Video Styles - CORRIGIDO */
 .video-wrapper {
     position: relative;
-    width: 600px;
+    max-width: 100%; /* ← Mudei de 600px para 100% */
+    width: 100%;
     margin: 0 auto;
     border-radius: 15px;
     overflow: hidden;
 }
 
-.video-wrapper iframe {
+/* Container responsivo do vídeo */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Proporção 16:9 */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     border-radius: 15px;
-    display: block;
 }
 
 /* Benefits */
